@@ -9,7 +9,7 @@ export default function TitleBar() {
         return appWindow.minimize();
     }
     const maximize = () => {
-        return appWindow.maximize();
+        return appWindow.toggleMaximize();
     }
     const closeWindow = () => {
         return appWindow.close();
@@ -17,22 +17,22 @@ export default function TitleBar() {
 
 
     return(
-        <div data-tauri-drag-region className="flex justify-end items-center bg-blue-700 gap-0 h-8 pr-2">
-            <div className='h-full flex justify-center items-center px-2 hover:bg-gray-400'>
-                <button onClick={minimize} className=''>
+        <div data-tauri-drag-region className="flex w-full justify-end items-center bg-blue-700 gap-0 h-8 pr-2">
+            <button onClick={minimize} className='h-full flex justify-center items-center px-2 hover:bg-gray-400/40'>
+                <div>
                     <Minus size={20} stroke={'white'} strokeWidth={7}/>
-                </button>
-            </div>
-            <div className='h-full flex justify-center items-center px-2 hover:bg-gray-400'>
-                <button onClick={maximize} className=''>
+                </div>
+            </button>
+            <button onClick={maximize} className='h-full flex justify-center items-center px-2 hover:bg-gray-400/40'>
+                <div>
                     <Square size={20} stroke={'white'} strokeWidth={4}/>
-                </button>
-            </div>
-            <div className='h-full flex justify-center items-center px-2 hover:bg-gray-400'>
-                <button onClick={closeWindow} className=''>
+                </div>
+            </button>
+            <button onClick={closeWindow} className='h-full flex justify-center items-center px-2 hover:bg-gray-400/40'>
+                <div >
                     <X size={20} stroke={'white'} strokeWidth={5}/>
-                </button>
-            </div>
+                </div>
+            </button>
         </div>
     )
 

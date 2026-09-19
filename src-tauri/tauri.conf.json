@@ -16,8 +16,10 @@
         "decorations": false ,
         "transparent": true,
         "resizable": true,
-        "width": 800,
-        "height": 600
+        "width": 500,
+        "height": 600,
+        "maxHeight": 600,
+        "maxWidth": 500
       }
     ],
     "security": {
